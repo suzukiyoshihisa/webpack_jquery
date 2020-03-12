@@ -1,0 +1,25 @@
+// 共通部分のインポート
+@import "./variables";
+
+body {
+  background: url("../images/background.png") no-repeat;
+  color: $white;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  font-size: $font-nomal;
+  color: $black;
+
+  &:before {
+    content: "";
+    background: url("../images/icon.png") no-repeat;
+    background-color: $background;
+    background-size: 100%;
+    display: block;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+  }
+}
