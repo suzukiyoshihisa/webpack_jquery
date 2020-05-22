@@ -25,7 +25,7 @@ module.exports = {
     // サーバー起動時ブラウザを自動的に起動する
     open: true,
     // ポート番号
-    port: 8000,
+    port: 8080,
     // コンテンツのルートディレクトリ
     contentBase: "./public"
   },

@@ -2,8 +2,12 @@
 @import "./variables";
 
 body {
-  background-color: #04a6eb;
-  color: $white;
+  margin: 10px;
+  display: flex;
+}
+
+#canvas {
+  background-color: darkgray;
 }
 
 h1 {
