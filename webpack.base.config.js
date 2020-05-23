@@ -10,7 +10,7 @@ const path = require("path");
 
 module.exports = {
   // エントリーポイントの設定
-  entry: "./src/js/app.js",
+  entry: ["@babel/polyfill", "./src/js/app.js"],
   // 出力の設定
   output: {
     // 出力するファイル名

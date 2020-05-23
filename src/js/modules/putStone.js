@@ -1,11 +1,12 @@
+import changePlayerInfo from "./changePlayerInfo";
+
 /**
  * 指定の位置に石を配置する
+ * @return {Object} playBoard
  */
-const $canvas = document.querySelector("#reversi");
-const ctx = $canvas.getContext("2d");
+export default function putStone(ctx, x, y, gameStatus) {
+  ctx.fillStyle = gameStatus.player === 1 ? "white" : "black";
 
-function putStone(x, y, color) {
-  ctx.fillStyle = color;
   ctx.beginPath();
   ctx.arc(
     x === 0 ? 20 : 40 * x + 20,
@@ -15,15 +16,13 @@ function putStone(x, y, color) {
     2 * Math.PI
   );
   ctx.fill();
-}
 
-$canvas.addEventListener("click", event => {
-  const rect = event.target.getBoundingClientRect();
-  clickedCoordinate_x = (event.clientX - rect.left) / 40;
-  clickedCoordinate_y = (event.clientY - rect.top) / 40;
-  putStone(
-    Math.floor(clickedCoordinate_x),
-    Math.floor(clickedCoordinate_y),
-    "white"
-  );
-});
+  gameStatus.playBoard[x][y] = gameStatus.player;
+  gameStatus.player !== 0 && gameStatus.player === 1
+    ? (gameStatus.player = 2)
+    : (gameStatus.player = 1);
+
+  changePlayerInfo(gameStatus.player);
+
+  return gameStatus;
+}

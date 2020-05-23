@@ -6,8 +6,17 @@ body {
   display: flex;
 }
 
-#canvas {
+#reversi {
   background-color: darkgray;
+  vertical-align: bottom;
+}
+
+.canvas {
+  border: 7px solid burlywood;
+}
+
+.side {
+  margin-left: 10px;
 }
 
 h1 {
