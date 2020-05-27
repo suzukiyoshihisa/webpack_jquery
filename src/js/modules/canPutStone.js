@@ -8,7 +8,7 @@
  * @return {boolean}
  */
 
-export default function canPutStone(x, y, playBoard) {
+function canPutStone(x, y, playBoard) {
   // 既に石が置いてある盤面には石が置けない
   if (playBoard[x][y] !== 0) return false;
 
@@ -27,3 +27,5 @@ export default function canPutStone(x, y, playBoard) {
 
   return true;
 }
+
+module.exports = canPutStone;

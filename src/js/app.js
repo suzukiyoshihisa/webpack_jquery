@@ -35,13 +35,10 @@ $canvas.addEventListener("click", event => {
   const clikced_x = clickedCoordinate[0];
   const clikced_y = clickedCoordinate[1];
 
+  console.log(clickedCoordinate);
+
   if (canPutStone(clikced_x, clikced_y, gameStatus.playBoard)) {
-    gameStatus = putStone(
-      ctx,
-      clickedCoordinate[0],
-      clickedCoordinate[1],
-      gameStatus
-    );
+    gameStatus = putStone(ctx, clikced_x, clikced_y, gameStatus);
   }
 
   event.preventDefault();

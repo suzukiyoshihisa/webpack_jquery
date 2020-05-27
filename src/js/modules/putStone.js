@@ -22,7 +22,7 @@ export default function putStone(ctx, x, y, gameStatus) {
     ? (gameStatus.player = 2)
     : (gameStatus.player = 1);
 
-  changePlayerInfo(gameStatus.player);
+  changePlayerInfo(gameStatus);
 
   return gameStatus;
 }
