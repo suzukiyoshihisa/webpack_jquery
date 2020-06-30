@@ -2,24 +2,11 @@
 @import "./variables";
 
 body {
-  background: url("../images/background.png") no-repeat;
-  color: $white;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  display: flex;
-  align-items: center;
-  font-size: $font-nomal;
-  color: $black;
-
-  &:before {
-    content: "";
-    background: url("../images/icon.png") no-repeat;
-    background-color: $background;
-    background-size: 100%;
-    display: block;
-    margin-right: 5px;
-    width: 18px;
-    height: 18px;
-  }
+img {
+  width: 100%;
+  vertical-align: bottom;
 }
